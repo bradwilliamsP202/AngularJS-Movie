@@ -1,0 +1,8 @@
+.DS_Store
+*.log
+node_modules
+bower_components
+.jshintrc
+gulpfile.js
+Gruntfile.js
+bower.json

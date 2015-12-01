@@ -1,0 +1,31 @@
+<ol class="breadcrumb">
+  <li><a href="#/">Home</a></li>
+  <li class="active">Results</li>
+</ol>
+
+<h5>Results for {{ movie }}</h5>
+<hr />
+
+    <div class="row">
+    	<div ng-if="movieResult.Response==='True'">
+	        <div class="col-md-3">
+	           <img class="thumbnail img-responsive" ng-src="{{movieResult.Poster}}">
+	       </div>
+	       <div class="col-md-9">
+	           <a href="{{movieResult.Website}}">{{movieResult.Title}}</a>, {{movieResult.Year}}
+	           <p>{{movieResult.Plot}}</p>
+	           <p><strong>IMDb Rating:</strong> <span class="label label-primary">{{movieResult.imdbRating}}</span></p>
+	           
+	        </div>
+	    </div>
+
+         <div ng-if="movieResult.Response==='False'">
+         	<div class="col-md-4">
+		        No results found.
+		    </div>
+      </div>
+    </div>
+
+<hr />
+
+<pre>{{movieResult || json}}</pre> 
